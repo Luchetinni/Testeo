@@ -12,15 +12,40 @@ var contadorIntentos;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	 
-		//alert(numeroSecreto );
-	
-
+	numeroSecreto = Math.floor(Math.random() * 100) +1;
+	console.log(numeroSecreto);
+  contadorIntentos = 0;
 }
 
 function verificar()
 {
-	
-	
+  var numeroIngresado;
+  numeroIngresado = numero.value;
+  numeroIngresado = parseInt(numeroIngresado);
+
+  contadorIntentos = contadorIntentos + 1;
+  intentos.value = contadorIntentos; 
+
+  console.log(numeroIngresado);
+  
+  if (numeroIngresado == numeroSecreto)
+  {
+    if (contadorIntentos < 4) 
+    {
+      alert("Mas suerte que avlaro en el csgo");
+    } else
+    {
+      alert("essaaa, sos un puto genio adivino crack master dios capo de la vida");
+    }
+    
+  } else
+  {
+    if (numeroIngresado > numeroSecreto)
+    {
+      alert("Casi casi eh, un poquito menos y estamos");
+    } else
+    {
+      alert("la pecheaste, higher up the stakes you punk.");
+    }
+  }
 }
